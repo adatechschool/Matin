@@ -14,3 +14,25 @@ Continuation de l'exercice "afficher l'alphabet"
 & Recherche sur convertir str en ascii (pour Laurine)
 
 -> Avec : Lydia, Wara, Laurine.
+
+Lundi 9 mars :
+
+Proposition d’exercice Adriel :
+
+```python
+>>> # Implémenter ce comportement :
+
+>>> ma_fonction_alpha()
+=> "abcdefghijklmnopqrstuvwxyz"
+
+>>> ma_fonction_alpha("a-z")
+=> "abcdefghijklmnopqrstuvwxyz"
+
+>>> ma_fonction_alpha("d-y")
+=> "defghijklmnopqrstuvwxy"
+
+>>> ma_fonction_alpha("y-d")
+=> ""
+```
+
+-> Avec : Lydia, Wara, Laurine, Adriel.

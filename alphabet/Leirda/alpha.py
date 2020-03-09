@@ -1,2 +1,2 @@
-def alpha_low():
+def alpha_low(optional_range = "a-z"):
     return "abcdefghijklmnopqrstuvwxyz"

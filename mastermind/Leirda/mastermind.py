@@ -5,8 +5,16 @@ import enum
 Color = enum.Enum('Color', 'red blue green pink yellow purple')
 
 def hint(secret, guess):
-    if secret[0] == guess[0]:
-        return [1, 0]
-    if secret[0] in guess:
-        return [0, 1]
-    return [0, 0]
+    good = 0
+    miss = 0
+    for color in zip(guess, list_pad(secret, len(guess) - len(secret))):
+        if color[0] == color[1]:
+            good += 1
+        elif color[0] in secret:
+            miss += 1
+    return [good, miss]
+
+def list_pad(list, size):
+    for elem in range(size):
+        list += [None]
+    return list

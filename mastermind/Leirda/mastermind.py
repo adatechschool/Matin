@@ -2,14 +2,15 @@
 import enum
 
 
-Color = enum.Enum('Color', 'red blue green pink yellow purple')
+Color = enum.Enum('Color', 'red blue green black white pink')
 
 def hint(secret, guess):
-    good = 0
-    miss = 0
-    for color in zip(guess, secret):
-        if color[0] == color[1]:
+    good, miss = 0, 0
+    for guess_peg, secret_peg in zip(guess, secret):
+        if guess_peg == secret_peg:
             good += 1
-        elif color[0] in secret:
+        elif guess_peg in secret:
+            secret.remove(guess_peg)
             miss += 1
-    return [good, miss]
+    return good, miss
+
